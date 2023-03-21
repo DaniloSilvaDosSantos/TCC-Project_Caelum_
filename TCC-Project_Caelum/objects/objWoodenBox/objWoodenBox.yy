@@ -1,0 +1,48 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "objWoodenBox",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityFragmentCount","path":"objects/parentEntity/parentEntity.yy",},"value":"4",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityFragment","path":"objects/parentEntity/parentEntity.yy",},"value":"objFragWood",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityHitScript","path":"objects/parentEntity/parentEntity.yy",},"value":"EntityHitDamage",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityShadow","path":"objects/parentEntity/parentEntity.yy",},"value":"False",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityCollision","path":"objects/parentEntity/parentEntity.yy",},"value":"True",},
+  ],
+  "parent": {
+    "name": "Scenarios",
+    "path": "folders/Objects/Scenarios.yy",
+  },
+  "parentObjectId": {
+    "name": "parentEntity",
+    "path": "objects/parentEntity/parentEntity.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityHits","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"entityHitsToDestroi","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"2","varType":0,},
+  ],
+  "solid": false,
+  "spriteId": {
+    "name": "sprWoodenBox",
+    "path": "sprites/sprWoodenBox/sprWoodenBox.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}
