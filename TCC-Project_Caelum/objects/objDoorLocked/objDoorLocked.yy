@@ -12,6 +12,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityCollision","path":"objects/parentEntity/parentEntity.yy",},"value":"True",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityActivateScript","path":"objects/parentEntity/parentEntity.yy",},"value":"DoorOpen",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityActivateArgs","path":"objects/parentEntity/parentEntity.yy",},"value":"[id, -1, -1,]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityCanBeDesable","path":"objects/parentEntity/parentEntity.yy",},"value":"False",},
   ],
   "parent": {
     "name": "Scenarios",

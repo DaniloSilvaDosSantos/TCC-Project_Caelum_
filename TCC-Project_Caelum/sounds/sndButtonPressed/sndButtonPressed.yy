@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sndButtonPressed.wav",
   "type": 0,
-  "volume": 0.11,
+  "volume": 0.4,
 }

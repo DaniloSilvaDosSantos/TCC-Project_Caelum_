@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sndSwordSwing.ogg",
   "type": 0,
-  "volume": 0.06,
+  "volume": 0.3,
 }

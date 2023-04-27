@@ -6,8 +6,6 @@ if(global.gamePaused == false){
 	script_execute(blockState);
 	
 	//Arrumando a profundidade
-	if(instance_exists(objPlayer)){
-		depth = objPlayer.depth+1;
-	}
+	depth = -bbox_bottom+16;
 	
 }

@@ -1,6 +1,5 @@
-// Verificar se esta colidindo com o jogador
-
 if(transitionAnimation == true){
+	// Verificar se esta colidindo com o jogador para que assim possa trocar de sala
 	if (instance_exists(objPlayer)) and (position_meeting(objPlayer.x, objPlayer.y, id)){
 		if (!instance_exists(objRoomTransition)) and (objPlayer.playerState != PlayerDeath){
 			global.targetRoom = targetRoom;
@@ -14,9 +13,12 @@ if(transitionAnimation == true){
 	}
 
 }else{
-	if (instance_exists(objPlayer)) and 
-	(position_meeting(objPlayer.x, objPlayer.y, id)){
-		room_goto(targetRoom);
+	if (instance_exists(objPlayer)) and (position_meeting(objPlayer.x, objPlayer.y, id)){
+		if(global.playerHasGotHit == false){
+			room_goto(rMichaelJackson);
+		}else{
+			room_goto(targetRoom);
+		}
 	}
 }
 

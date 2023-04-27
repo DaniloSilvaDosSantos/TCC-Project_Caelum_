@@ -1,6 +1,6 @@
 // Pausando o jogo
 
-if (keyboard_check_pressed(vk_space)) and (!instance_exists(objRoomTransition)) and (objUI.visible == true){
+if (keyboard_check_pressed(vk_space)){
 	global.gamePaused = !global.gamePaused;
 	
 	if(global.gamePaused){

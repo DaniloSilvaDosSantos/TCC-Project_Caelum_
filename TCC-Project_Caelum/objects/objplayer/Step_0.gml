@@ -1,13 +1,13 @@
-//Declaração de variaveis gerais de entrada do jogador
+//Declaração de variaveis gerais de entrada do jogador por teclado ou por um controle
 
-keyLeft=keyboard_check(vk_left);
-keyRight=keyboard_check(vk_right);
-keyUp=keyboard_check(vk_up);
-keyDown=keyboard_check(vk_down);
-keyAction=keyboard_check_pressed(ord("Z"));
-keyAttack=keyboard_check_pressed(ord("X"));
-keyItem=keyboard_check(ord("C")); 
-keyMenu=keyboard_check_pressed(vk_enter);
+keyLeft = keyboard_check(vk_left) or gamepad_axis_value(global.controller, gp_axislh) <= -0.7 or gamepad_button_check(global.controller, gp_padl);
+keyRight = keyboard_check(vk_right) or gamepad_axis_value(global.controller, gp_axislh) >= 0.7 or gamepad_button_check(global.controller, gp_padr);
+keyUp = keyboard_check(vk_up) or gamepad_axis_value(global.controller, gp_axislv) <= -0.7 or gamepad_button_check(global.controller, gp_padu);
+keyDown = keyboard_check(vk_down) or gamepad_axis_value(global.controller, gp_axislv) >= 0.7 or gamepad_button_check(global.controller, gp_padd);
+keyAction = keyboard_check_pressed(ord("Z")) or gamepad_button_check_pressed(global.controller, gp_face1);
+keyAttack = keyboard_check_pressed(ord("X")) or gamepad_button_check_pressed(global.controller, gp_face2);
+keyItem = keyboard_check(ord("C")) or gamepad_button_check_pressed(global.controller, gp_face3) or gamepad_button_check_pressed(global.controller, gp_face4); 
+keyMenu = keyboard_check_pressed(vk_enter);
 
 //Processando a movimentação
 

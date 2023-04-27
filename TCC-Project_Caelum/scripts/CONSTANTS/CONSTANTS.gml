@@ -21,5 +21,7 @@ enum ENEMY_STATE {
 	JUMP,
 	WAIT,
 	STUN,
+	SURPRISED,
+	WAKEUP
 }
 

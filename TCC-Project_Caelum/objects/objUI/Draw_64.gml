@@ -1,9 +1,9 @@
-// Desenhando a vida do jogador
-var tempPlayerLife = global.playerLife;
-var tempPlayerMaxHearts = global.playerLifeMax / LIFE_PER_HEARTH;
-var tempPlayerLifeFrag = tempPlayerLife % LIFE_PER_HEARTH;
-// Para descobrir qual dos corações de vida não esta completo
-var tempPlayerPartHeart = floor(tempPlayerLife / LIFE_PER_HEARTH) + 1;
+
+//DEBUG
+//draw_set_color(c_white);
+//draw_set_font(fontText);
+//draw_text(96, 40, "FPS REAL: " + string(fps_real));
+//draw_text(40, 48, "FPS: "+ string(fps));
 
 if (room != rSplashScreen) and (room != rLogoScreen) and (room != rTitleScreen)
 and (room != rGameOver) and (room != rOpenYourEyes) and (room != rCronologyScreen)
@@ -12,6 +12,13 @@ and (room != rEndGame) and (room != rMichaelJackson){
 } else{
 	draw_set_alpha(0);
 }
+
+// Desenhando a vida do jogador
+var tempPlayerLife = global.playerLife;
+var tempPlayerMaxHearts = global.playerLifeMax / LIFE_PER_HEARTH;
+var tempPlayerLifeFrag = tempPlayerLife % LIFE_PER_HEARTH;
+// Para descobrir qual dos corações de vida não esta completo
+var tempPlayerPartHeart = floor(tempPlayerLife / LIFE_PER_HEARTH) + 1;
 
 for(var i = 1; i <= tempPlayerMaxHearts; i++;)
 {
@@ -76,15 +83,30 @@ draw_text(xUI, yUI-1, text);
 draw_set_color(c_white);
 draw_text(xUI, yUI, text);
 
+//Verificando que tipo de HUD mostrar de acordo com o ultimo input
+if(keyboard_check(vk_anykey)) lastInputController = false;
+if(global.controllerIsConected == true){
+	if(GamepadCheck(global.controller) == true) lastInputController = true;
+}
+
 // Desenhando os botões
 
-// Desenhando o botão C dos items equipados
+// Desenhando o botão dos items equipados
 xUI = 286;
 yUI = 16;
-if(keyboard_check(ord("C")) == 0){
-	draw_sprite(sprCButtonUI, 0,xUI, yUI);
-} else{
-	draw_sprite(sprCButtonUI, 1,xUI, yUI);
+
+if(lastInputController == false){
+	if(keyboard_check(ord("C")) == 0){
+		draw_sprite(sprCButtonUI, 0,xUI, yUI);
+	} else{
+		draw_sprite(sprCButtonUI, 1,xUI, yUI);
+	}
+}else{
+	if(gamepad_button_check(global.controller, gp_face3) == 0) and (gamepad_button_check(global.controller, gp_face4) == 0){
+		draw_sprite(sprGamepadX, 0,xUI, yUI);
+	} else{
+		draw_sprite(sprGamepadX, 1,xUI, yUI);
+	}
 }
 
 //Verificando se o jogador possui algum item equipado e desenhando o icone dele
@@ -130,14 +152,22 @@ if(global.playerItemEquiped != -1){
 	}
 }
 
-// Desenhando o botão X do comando de ataque
+// Desenhando o botão do comando de ataque
 xUI = 266;
 yUI = 16;
 
-if(keyboard_check(ord("X")) == 0){
-	draw_sprite(sprXButtonUI, 0,xUI, yUI);
-} else{
-	draw_sprite(sprXButtonUI, 1,xUI, yUI);
+if(lastInputController == false){
+	if(keyboard_check(ord("X")) == 0){
+		draw_sprite(sprXButtonUI, 0,xUI, yUI);
+	} else{
+		draw_sprite(sprXButtonUI, 1,xUI, yUI);
+	}
+}else{
+	if(gamepad_button_check(global.controller, gp_face2) == 0){
+		draw_sprite(sprGamepadB, 0,xUI, yUI);
+	} else{
+		draw_sprite(sprGamepadB, 1,xUI, yUI);
+	}
 }
 
 // Verificando se jogador possui a espada desbloqueada, se sim desenhar ela
@@ -145,13 +175,21 @@ if(global.playerSwordUnlock == true){
 	draw_sprite(sprSwordUI, 0, xUI - 4, yUI - 9);
 }
 
-// Desenhando o botão Z de ação
+// Desenhando o botão de ação
 xUI = 246;
 yUI = 16;
-if(keyboard_check(ord("Z")) == 0){
-	draw_sprite(sprZButtonUI, 0,xUI, yUI);
-} else{
-	draw_sprite(sprZButtonUI, 1,xUI, yUI);
+if(lastInputController == false){
+	if(keyboard_check(ord("Z")) == 0){
+		draw_sprite(sprZButtonUI, 0,xUI, yUI);
+	} else{
+		draw_sprite(sprZButtonUI, 1,xUI, yUI);
+	}
+}else{
+	if(gamepad_button_check(global.controller, gp_face1) == 0){
+		draw_sprite(sprGamepadA, 0,xUI, yUI);
+	} else{
+		draw_sprite(sprGamepadA, 1,xUI, yUI);
+	}
 }
 
 // Desenhando a palavra ação

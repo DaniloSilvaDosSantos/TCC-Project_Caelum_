@@ -16,7 +16,18 @@ if(animationLeading == TRANSITION_IN){
 				room_goto(global.respawnRoom);
 			} break;
 			case 1 : {
+				//Resetando as variaveis
 				global.respawnRoom = rCaveF1;
+				global.playerHasGotHit = false;
+				global.playerSwordUnlock = false;
+				global.playerItemEquiped = -1;
+				global.playerBombUnlocked = false;
+				global.playerBombAmmo = -1;
+				global.playerHasWakeUp = false;
+				global.playerMoney = 0;
+				global.playerKeys = 0;
+				ds_list_destroy(global.savedObjectProperties);
+				
 				room_goto(rSplashScreen);
 			} break;
 		}

@@ -1,8 +1,8 @@
 function HurtPlayer(enemyAttackDir, knockback, damage){
-	audio_play_sound(sndGetHit, 10, false);
 	if(objPlayer.invulnerable <= 0){
+		global.playerHasGotHit = true;
 		global.playerLife = max(0, global.playerLife - damage);
-		
+		audio_play_sound(sndGetHit, 10, false);
 		if(global.playerLife > 0){
 			// Causando dano no jogador e o empurrando 
 			with(objPlayer){

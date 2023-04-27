@@ -1,5 +1,7 @@
 event_inherited();
 
+image_speed = 0;
+
 //Estado do Slime
 enemyState = ENEMY_STATE.WANDER;
 

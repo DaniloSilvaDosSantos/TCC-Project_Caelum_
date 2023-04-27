@@ -10,6 +10,7 @@
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityShadow","path":"objects/parentEntity/parentEntity.yy",},"value":"False",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityCollision","path":"objects/parentEntity/parentEntity.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parentEntity","path":"objects/parentEntity/parentEntity.yy",},"propertyId":{"name":"entityCanBeDesable","path":"objects/parentEntity/parentEntity.yy",},"value":"False",},
   ],
   "parent": {
     "name": "Scenarios",

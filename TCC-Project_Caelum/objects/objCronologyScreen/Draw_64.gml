@@ -1,7 +1,7 @@
 // Tipos de animações para a transição de salas
 
 // Progresso da transição
-show_debug_message(animationPercent)
+show_debug_message(animationPercent);
 if(animationLeading == TRANSITION_OUT){
 
 	animationPercent = min(1, animationPercent + TRANSITION_SPEED/3);
@@ -12,6 +12,13 @@ if(animationLeading == TRANSITION_OUT){
 	
 }
 if(animationLeading == "TRANSITION_WAIT"){
+	//Verificando se é para pular a historia
+	if(keyboard_check(vk_enter) == 1) or (keyboard_check(vk_space) == 1) or (keyboard_check(ord("X")) == 1)
+	or (gamepad_button_check_pressed(global.controller, gp_face1) ==1) or (gamepad_button_check_pressed(global.controller, gp_start) == 1)
+	{
+		animationLeading = TRANSITION_IN;
+	}
+	
 	if(cont < contMax){
 		y = y - scrollUpSpd;
 		cont = cont + scrollUpSpd;

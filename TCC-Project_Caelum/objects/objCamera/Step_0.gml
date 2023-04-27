@@ -1,9 +1,27 @@
 // Atualizar o destino da camera
 if (instance_exists(follow)){
+	xTo = follow.x;
+	yTo = follow.y;
 
-xTo = follow.x;
-yTo = follow.y;
+	if(++desativateCont >= desativateContMax){
+		//Variaveis uteis para desativar entidades distantes
+		var x1 = follow.x - wViewHalf*2;
+		var x2 = follow.x + wViewHalf*2;
 
+		var y1 = follow.y - hViewHalf*2;
+		var y2 = follow.y + hViewHalf*2;
+
+		//Desativando entidades que estão a uma tela de distancia do objeto que a camera esta seguindo
+		for (var i = 0; i < array_length(global.deactivateList); i++) {
+			with (global.deactivateList[i]) {
+				if (CullRange(self, x1, x2, y1, y2) == true) {
+					instance_deactivate_object(self);
+				}
+			}
+		}
+		//Ativando novamente esse objeto se ele estiver dentro dessa região
+		instance_activate_region(x1, y1, wViewHalf * 4, hViewHalf * 4, true);
+	}
 }
 
 // Atualizar o local atual da camera

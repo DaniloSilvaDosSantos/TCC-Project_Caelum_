@@ -12,3 +12,6 @@ shakeLenght =0;
 shakeMagnetude =0;
 shakeRemain = 0;
 
+desativateCont = 0;
+desativateContMax = 12;
+

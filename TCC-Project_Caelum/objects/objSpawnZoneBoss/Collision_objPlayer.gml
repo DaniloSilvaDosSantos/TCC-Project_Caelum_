@@ -10,7 +10,9 @@ DoorBossClose(
 );
 
 with(objAnimatedArmor){
-	enemyState = ENEMY_STATE.CHASE;
+	enemyState = ENEMY_STATE.WAKEUP;
+	surprised = true;
+	audio_play_sound(sndAlert, 50, false);
 }
 with(objSoundBox){
 	if(!audio_is_playing(sndBossBattle)){

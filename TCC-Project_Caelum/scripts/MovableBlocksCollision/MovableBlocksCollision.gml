@@ -34,7 +34,7 @@ function MovableBlocksCollision(){
 	// Colisão horizontal com entidades solidas
 	if(place_meeting(x+hSpd, y, parentEntity)){
 		var entitySolid = instance_place(x+hSpd, y, parentEntity)
-		if(entitySolid.entityCollision == true){
+		if(entitySolid.entityCollision == true) or (entitySolid.entityBlockCol == true){
 			hSpd = 0;
 			tempCollision = true;
 		}
@@ -43,7 +43,7 @@ function MovableBlocksCollision(){
 	// Colisão vertical com entidades solidas
 	if(place_meeting(x, y+vSpd, parentEntity)){
 		var entitySolid = instance_place(x, y+vSpd, parentEntity)
-		if(entitySolid.entityCollision == true){
+		if(entitySolid.entityCollision == true) or (entitySolid.entityBlockCol == true){
 			vSpd = 0;
 			tempCollision = true;
 		}
@@ -53,5 +53,4 @@ function MovableBlocksCollision(){
 	y = y + vSpd;
 	
 	return tempCollision;
-	
 }

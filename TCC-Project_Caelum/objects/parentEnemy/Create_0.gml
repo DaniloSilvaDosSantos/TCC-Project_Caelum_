@@ -1,6 +1,6 @@
 event_inherited();
 
-// Variaveis esenciais
+// Variaveis uteis
 enemyState = ENEMY_STATE.IDLE;
 hSpd = 0;
 vSpd = 0;
@@ -16,6 +16,8 @@ enemyStateTarget = enemyState;
 enemyStatePrevious = enemyState;
 enemyStateWait = 0;
 enemyStateWaitDuration = 0;
+surprised = false;
+surprisedCont = 0;
 
 //Sprites do inimigo
 sprMove = sprSlime;

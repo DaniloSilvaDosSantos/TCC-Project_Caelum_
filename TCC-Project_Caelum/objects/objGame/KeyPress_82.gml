@@ -1,5 +1,5 @@
 // dar restart no jogo
 
-//game_restart();
+game_restart();
 
 

@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sndTitleScreen.wav",
   "type": 0,
-  "volume": 0.1,
+  "volume": 0.25,
 }

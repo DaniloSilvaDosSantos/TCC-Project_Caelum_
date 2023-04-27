@@ -4,6 +4,10 @@ waitDuration = 90;
 stunDuration = 300;
 stunCont = 0;
 
+wakeUpDuration = 30;
+
+surprised = false
+
 //Estado do BlowPider
 enemyState = ENEMY_STATE.IDLE;
 
@@ -17,3 +21,4 @@ enemyFunction[ENEMY_STATE.JUMP] = AnimatedArmorJump;
 enemyFunction[ENEMY_STATE.CHASE] = AnimatedArmorChase;
 enemyFunction[ENEMY_STATE.HURT] = AnimatedArmorStun;
 enemyFunction[ENEMY_STATE.DIE] = AnimatedArmorDie;
+enemyFunction[ENEMY_STATE.WAKEUP] = AnimatedArmorWakeUp;

@@ -50,8 +50,16 @@ function AnimatedArmorStun(){
 		entityAttackImune = true;
 		
 	}
+}
+
+function AnimatedArmorWakeUp(){
+	sprite_index = sprChase;
 	
-	
+	// Quando o tempo de atordoamento acabar, atualizar o estado
+	if(--wakeUpDuration <= 0){
+		surprised = false;
+		enemyState = ENEMY_STATE.CHASE;
+	}
 }
 
 function AnimatedArmorDie(){
