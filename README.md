@@ -1,4 +1,4 @@
-Este projeto se trata do meu trabalho de conclusão do curso de informática, que se trata da confecção de um  jogo inspirado na franquia de jogos The Legend of Zelda, da Nintendo, do gênero ação e aventura, com puzzles, na plataforma de desenvolvimento de jogos GameMaker Studio 2. 
+Este projeto se trata do meu trabalho de conclusão do curso de informática do Instituto Federal de Educação, Ciencia e Tecnologia Campus IFSul Sapiranga, que se trata da confecção de uma demo de um jogo, uma versão de demonstração, inspirado na franquia de jogos The Legend of Zelda, da Nintendo, do gênero ação e aventura, com puzzles, na plataforma de desenvolvimento de jogos GameMaker Studio 2. 
 
 AGRADECIMENTOS ESPECIAIS
 
